@@ -1,5 +1,6 @@
 # A function that iterates through attributes of a 
 # movie, but only pulls out the title and director.
+# checks if the value is a string, if it is it gets printed.
 
 movie = {
     'title': 'a',
@@ -9,5 +10,5 @@ movie = {
 }
 
 for key in movie:
-    if key == 'title' or key == 'director':
+    if type(movie[key]) == str:
         print(key + ": " + str(movie[key]))
