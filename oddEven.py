@@ -1,4 +1,8 @@
-# Odd and Even
+/* Odd Even. 
+
+a function that iterates through, while specifying 
+what number of the iteration is odd or even.
+*/
 
 def showNumber(number):
     for i in range(number + 1):
