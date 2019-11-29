@@ -1,4 +1,5 @@
-/* Odd Even. 
+/* 
+Odd Even. 
 
 a function that iterates through, while specifying 
 what number of the iteration is odd or even.
