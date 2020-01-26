@@ -1,0 +1,22 @@
+import urllib.request, urllib.parse, urllib.error
+import xml.etree.ElementTree as ET
+
+url = input('Enter location: ')
+print('Retrieving', url)
+
+uh = urllib.request.urlopen(url)
+data = uh.read()
+print('Retrieved', len(data), 'characters')
+
+# list = data.decode()
+tree = ET.fromstring(data)
+counts = tree.findall('.//count')
+
+count = 0
+total = 0
+for x in counts:
+    count = count + 1
+    numbers = x.text
+    total = total + int(numbers)
+print('Count:', count)
+print('Sum:', total)

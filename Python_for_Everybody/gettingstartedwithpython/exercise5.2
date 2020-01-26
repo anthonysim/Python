@@ -1,0 +1,28 @@
+# Exercise 5.2
+largest = -1
+smallest = None
+
+while True:
+    num = input("Enter a number: ")
+    if num == "done":
+        break
+
+    try:
+        number = int(num)
+    except:
+        print("Invalid input")
+        continue
+
+    if number > largest:
+        largest = number
+        # print("Maximum is", largest)
+
+    if smallest is None:
+        smallest = number
+        # print("Minimum is", smallest)
+    elif number < smallest:
+        smallest = number
+        # print("Minimum is", smallest)
+
+print("Maximum is", largest)
+print("Minimum is", smallest)

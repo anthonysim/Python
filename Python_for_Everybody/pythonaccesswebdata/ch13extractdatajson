@@ -1,0 +1,20 @@
+import json
+import urllib.request, urllib.parse, urllib.error
+
+url = input('Enter location:')
+print('Retrieving', url)
+
+uh = urllib.request.urlopen(url)
+data = uh.read().decode()
+print('Retrieved', len(data), 'characters')
+
+info = json.loads(data)
+# print(json.dumps(info, indent=4))
+
+count = 0
+total = 0
+for x in info['comments']:
+    count = count + 1
+    total = total + x['count']
+print('Count:', count)
+print('Sum:', total)

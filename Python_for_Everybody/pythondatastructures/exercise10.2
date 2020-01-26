@@ -1,0 +1,21 @@
+# exercise 10.2
+
+name = input("Enter file:")
+if len(name) < 1 : name = "mbox-short.txt"
+handle = open(name)
+
+counts = dict()
+for line in handle:
+    if not line.startswith("From "):
+        continue
+    # print(line)
+    emails = line.split()
+    time = emails[5]
+    hours = time.split(':')
+    # print(hours)
+    hour = hours[0]
+    # print(hour)
+    counts[hour] = counts.get(hour, 0) + 1
+
+for k, v in sorted(counts.items()):
+    print(k,v)

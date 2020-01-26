@@ -1,0 +1,19 @@
+# exercise 3.1
+
+# asking the user to enter the amount of users and storing it in "hrs."
+# changing the hours (in strings) to floats and storing it in "h."
+hrs = input("Enter Hours:")
+h = float(hrs)
+
+# asking the user to input the rate and storing it under "rate."
+# changing the rate (in strings) to floats and storing it in "r."
+rate = input("Enter Rate:")
+r = float(rate)
+
+# conditional, if "h" is 40 hrs or less to print x.
+if h <= 40:
+    x = (h * r)
+    print(x)
+elif h >= 40:
+    y = (40 * r) + (h - 40) * (r * 1.5)
+    print(y)

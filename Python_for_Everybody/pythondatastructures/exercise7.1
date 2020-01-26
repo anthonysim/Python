@@ -1,0 +1,11 @@
+# prompts user to enter file name, use "words.txt"
+fname = input("Enter file name: ")
+# opens file "words.txt" and puts it is defined into fileOpen
+fileOpen = open(fname)
+# runs a for loop print line after line after line
+for file in fileOpen:
+    # space is created so the "rstrip()" method is used to remove space
+    x = file.rstrip()
+    # #"upper.()" method is used to capitalize everything and place into x.
+    # x is printed
+    print(x.upper())

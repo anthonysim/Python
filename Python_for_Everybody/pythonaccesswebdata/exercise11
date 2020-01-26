@@ -1,0 +1,25 @@
+# Chapter 11 Regular Expressions Problem
+
+# imports regular expressions
+import re
+
+# prompts user to type in file name
+fname = input("Enter file name: ")
+# opens file
+file = open(fname)
+
+# total set at zero starting point
+total = 0
+# count set at zero to see if we have the right amount of numbers
+# count = 0
+# for loop used to find all numbers
+for x in file:
+    numbers = re.findall('[0-9]+', x)
+
+    # for loop to total all numbers together
+    for number in numbers:
+        total = total + int(number)
+        # count = count + 1
+# print out the total of all numbers
+print(total)
+# print(count)

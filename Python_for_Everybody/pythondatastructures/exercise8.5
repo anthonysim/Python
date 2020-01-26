@@ -1,0 +1,25 @@
+# exercise 8.5
+fname = input("Enter file name: ")
+# if the user leaves the unput "blank" it will automatically use "mbox-short.txt" instead
+if len(fname) < 1 : fname = "mbox-short.txt"
+
+# opens and reads the file.
+fh = open(fname)
+
+# count starts at "0" to count each line
+count = 0
+# for loop going through each line of the text file
+for line in fh:
+    # if the line doesn't start with a "From " ignore it and continue
+    if not line.startswith("From "):
+        continue
+    # counts each line of the file, each line adds 1.
+    count = count + 1
+    # the lines starting with "From " are split, meaning they are separated and
+    # placed in a list
+    emails = line.split()
+    # prints the "1" spot since "From " begins at "0".
+    print(emails[1])
+
+# prints the "count" that was added up through the for loop.
+print("There were", count, "lines in the file with From as the first word")

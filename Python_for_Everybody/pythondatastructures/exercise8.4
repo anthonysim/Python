@@ -1,0 +1,20 @@
+# exercise 8.4
+
+# prompts user to enter file name use "romeo.txt"
+fname = input("Enter file name: ")
+# opens and reads file
+fh = open(fname)
+romeo = fh.read()
+# splits file by the " " in between the words
+split = romeo.split()
+
+# lst variable for an empty list
+lst = list()
+# for loop stating for line in the list "split"
+for line in split:
+    # if line is not in the lst (list), add line to the list, then sort it
+    if line not in lst:
+        lst.append(line)
+        lst.sort()
+# print the list after it went through the for loop
+print(lst)

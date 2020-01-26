@@ -1,0 +1,30 @@
+# Exercise 4.6
+
+# prompts the user to enter the hours, converts it into floats, then
+#places it into a. a equals hours.
+#string, integer, float.
+hrs = input("Enter Hours:")
+a = float(hrs)
+
+# prompts the user to enter the rate, converts it into floats, then
+#places it into b. b equals rate.
+rate = input("Enter Rate:")
+b = float(rate)
+
+# function named "computepay" that runs the calculation as stated below.
+# return means putting the calulated amount back into computepay(a, b).
+# h and r are parameters representing "arguments" within the function.
+def computepay(h, r):
+    pay = (40 * r) + (h - 40) * (r * 1.5)
+    return pay
+
+# conditional if under 40 hrs run code.
+if a <= 40:
+    x = (a * b)
+    print(x)
+# conditional if over 40 hrs run the code calling the computepay function
+# using a and b (which were from user input above)/the arguments that will
+# be used to pass through the paramters in the computepay function.
+elif a >= 40:
+    x = computepay(a, b)
+    print(x)
